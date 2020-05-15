@@ -10,6 +10,17 @@ namespace Ejemplo_01
     {
         static void Main(string[] args)
         {
+            Rectangulo rectangulo = new Rectangulo();
+
+            rectangulo.punto1 = new Punto { X = 0, Y = 0 };
+            rectangulo.punto2 = new Punto { X = 4, Y = 0 };
+            rectangulo.punto3 = new Punto { X = 4, Y = 4 };
+            rectangulo.punto4 = new Punto { X = 0, Y = 4 };
+
+            Console.WriteLine(rectangulo.CalcularArea());
+            Console.WriteLine(rectangulo.CalcularPerimetro());
+
+
 
             //Para copiar una línea no es necesario seleccionar toda la sección.
             Persona persona = new Persona { PersonaID = 1, Edad=21, Apellidos = "Torrico", Nombres = "Marquez" };

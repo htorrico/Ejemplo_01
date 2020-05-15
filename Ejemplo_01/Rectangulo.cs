@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,16 +23,24 @@ namespace Ejemplo_01
         }
         public double CalcularPerimetro()
         {
-            return 10;
+            double base_, altura;
+            base_ = CalcularBase();
+            altura = CalcularAltura();
+            return (base_ + altura) * 2;
         }
 
         private double CalcularBase()
         {            
-            return 1;
+            return CalcularDistancia(punto1,punto2);
         }
         private double CalcularAltura()
         {
-            return 1;
+            return CalcularDistancia(punto2,punto3);
+        }
+        private double CalcularDistancia(Punto punto1,Punto punto2)
+        {
+            return Math.Sqrt(Math.Pow((double)(punto2.Y - punto1.Y), 2) + 
+                            Math.Pow((double)(punto2.X - punto1.X), 2));
         }
 
     }
