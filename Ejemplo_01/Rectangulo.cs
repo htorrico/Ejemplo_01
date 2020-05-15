@@ -20,6 +20,10 @@ namespace Ejemplo_01
             altura = CalcularAltura();
             return base_ * altura;
         }
+        public double CalcularPerimetro()
+        {
+            return 10;
+        }
 
         private double CalcularBase()
         {            
